@@ -24,6 +24,12 @@
 
 #include <dirent.h>
 
+// mipsel-openwrt-linux-musl-gcc (OpenWrt GCC 11.3.0 r0-550f427) 11.3.0
+#include <limits.h>          /* 先拿 PATH_MAX */
+#ifndef MAXNAMLEN
+#define MAXNAMLEN 255        /* 或者 PATH_MAX-1，按传统目录项长度给 */
+#endif
+
 typedef struct dirEntry {		/* structure of data item */
   char fname[MAXNAMLEN + 1];		/* filename + terminating null */
   time_t time;				/* last modification date */
