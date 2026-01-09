@@ -38,13 +38,18 @@
 #include "minicom.h"
 #include "intl.h"
 
-#ifdef VC_MUSIC
-#  if defined(__GLIBC__)
-#    include <sys/ioctl.h>
-#    include <sys/kd.h>
-#    include <sys/time.h>
-#  endif
-#endif
+//#ifdef VC_MUSIC
+//#  if defined(__GLIBC__)
+//#    include <sys/ioctl.h>
+//#    include <sys/kd.h>
+//#    include <sys/time.h>
+//#  endif
+//#endif
+
+// mipsel-openwrt-linux-musl-gcc (OpenWrt GCC 11.3.0 r0-550f427) 11.3.0
+#include <sys/ioctl.h>
+#include <sys/kd.h>
+#include <sys/time.h>
 
 enum { CURRENT_VERSION = 6 };
 
