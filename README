@@ -33,3 +33,7 @@ sunsite.unc.edu:/pub/Linux/apps/serialcomm/modem/modem-*.tar.gz by
 Merijn de Jonge <mdejonge@wins.uva.nl>.
 
 adam@lackorzynski.de
+
+/////////////////////////////////////////////////////////////////////////
+
+mipsel-openwrt-linux-musl-gcc (OpenWrt GCC 11.3.0 r0-550f427) 11.3.0 编译通过
